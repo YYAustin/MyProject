@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
@@ -14,13 +15,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
-
-        <ImageView
-            android:layout_width="18dp"
-            android:layout_height="18dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-             />
     </LinearLayout>
 
 
@@ -29,33 +23,34 @@
         android:layout_width="wrap_content"
         android:layout_height="42dp"
         android:orientation="horizontal"
-        android:background="#fff"
+
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="180dp"
         >
         <LinearLayout
-            android:layout_width="95dp"
+            android:layout_width="70dp"
             android:layout_height="48dp"
             android:orientation="horizontal"
             android:gravity="center"
 
             >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="username:"
-                android:textSize="17sp"
-                android:textColor="#564a4a"
-                />
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="学号:"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textColor="#564a4a"-->
+                <!--/>-->
         </LinearLayout>
 
-        <EditText
-            android:id="@+id/et_username"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:inputType="number"
-            />
+        <!--<EditText-->
+            <!--android:id="@+id/et_username"-->
+            <!--android:layout_width="200dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="0dp"-->
+            <!--android:inputType="number"-->
+            <!--android:maxLines="1"-->
+            <!--/>-->
     </LinearLayout>
 
     <LinearLayout
@@ -63,45 +58,46 @@
         android:layout_height="42dp"
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
-        android:background="#fff"
-        android:layout_marginTop="180dp"
+
+        android:layout_marginTop="240dp"
         android:id="@+id/linearLayout">
         <LinearLayout
-            android:layout_width="95dp"
+            android:layout_width="75dp"
             android:layout_height="48dp"
             android:orientation="horizontal"
             android:gravity="center"
 
             >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="password:"
-                android:textSize="17sp"
-                android:textColor="#493d3d"
-                />
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="密码:"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textColor="#493d3d"-->
+                <!--/>-->
         </LinearLayout>
 
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="200dp"
-            android:layout_height="48dp"
-            android:layout_marginLeft="5dp"
-            android:inputType="number" />
+        <!--<EditText-->
+            <!--android:id="@+id/et_password"-->
+            <!--android:layout_width="200dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_marginLeft="0dp"-->
+            <!--android:inputType="number"-->
+            <!--android:maxLines="1" />-->
     </LinearLayout>
 
     <!--android:visibility="gone"-->
-    <TextView
-        android:id="@+id/Login_TextView_PhoneError"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="手机号不正确"
-        android:textSize="12sp"
-        android:textColor="#fff"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/Login_LinearLayout_Phone"
-        android:visibility="gone"
-        />
+    <!--<TextView-->
+        <!--android:id="@+id/Login_TextView_PhoneError"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="手机号不正确"-->
+        <!--android:textSize="12sp"-->
+        <!--android:textColor="#fff"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_below="@id/Login_LinearLayout_Phone"-->
+        <!--android:visibility="gone"-->
+        <!--/>-->
 
     <Button
         android:id="@+id/button1"
@@ -115,8 +111,58 @@
         android:layout_marginTop="32dp"
         android:background="#66638f8f"
         android:gravity="center"
-        android:text="Login"
+        android:text="登录"
         android:textColor="#fff"
-        android:textSize="17sp"
+        android:textSize="18sp"
         android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Login_LinearLayout_Phone"
+        android:layout_alignStart="@+id/Login_LinearLayout_Phone"
+        android:layout_below="@+id/button1"
+        android:layout_marginLeft="70dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="13dp"
+        android:text="用户注册" />
+
+    <TextView
+        android:id="@+id/problem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/sign"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/sign"
+        android:layout_toRightOf="@+id/sign"
+        android:text="无法登陆" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/Login_LinearLayout_Phone"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/problem"
+        android:layout_toStartOf="@+id/problem"
+        android:ems="10"
+        android:hint="学号"
+        android:inputType="textPersonName"
+        android:text="1560311103" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="密码"
+        android:inputType="textPassword"
+        android:text="1234"
+        android:layout_alignTop="@+id/linearLayout"
+        android:layout_alignLeft="@+id/editText4"
+        android:layout_alignStart="@+id/editText4" />
+
 </RelativeLayout>
